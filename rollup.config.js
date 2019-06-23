@@ -4,8 +4,11 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import extensions from 'rollup-plugin-extensions';
+import url from 'rollup-plugin-url';
 
+const doc = process.env.NODE_ENV === 'doc';
 const production = !process.env.ROLLUP_WATCH;
+console.log(process.env.NODE_ENV);
 
 let config = {
   input: 'src/examples/main.js',
@@ -36,7 +39,22 @@ let config = {
   },
 };
 
-if (production) {
+if (doc) {
+  config = {
+    ...config,
+    input: 'doc/main.js',
+    output: production
+      ? {
+          sourcemap: true,
+          format: 'iife',
+          name: 'app',
+          dir: 'dist_doc',
+        }
+      : config.output,
+    inlineDynamicImports: true,
+    plugins: [...config.plugins, url()],
+  };
+} else if (production) {
   config = {
     ...config,
     input: 'src/Router/index.js',

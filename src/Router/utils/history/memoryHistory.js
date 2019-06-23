@@ -23,8 +23,9 @@ export function createMemoryHistory() {
 
   function push(to) {
     if (isBlocked()) return [push, [to]];
-    const nextState = currentState + 1;
-    stack = stack.slice(0, nextState).concat(nextState);
+    if (stack[currentState] === to) return;
+    currentState++;
+    stack = stack.slice(0, currentState).concat(to);
     setPath(to);
     onStackUpdate();
   }

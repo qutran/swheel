@@ -1,5 +1,6 @@
 export function links(node, { history }) {
   function onClick(e) {
+    e.stopPropagation();
     let current = e.target;
 
     while (current && current.tagName !== 'A') {

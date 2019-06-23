@@ -5,4 +5,5 @@ public/main.*
 public/chunk*
 public/Page*
 dist
+dist_doc
 package-lock.json
