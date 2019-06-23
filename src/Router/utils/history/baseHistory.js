@@ -16,6 +16,7 @@ export function createBaseHistory(initialPath) {
 
   function unblock() {
     _isBlocked = false;
+    _isLeaving = false;
   }
 
   function isBlocked() {
@@ -31,7 +32,6 @@ export function createBaseHistory(initialPath) {
 
   function acceptLeave() {
     unblock();
-    _isLeaving = false;
   }
 
   function cancelLeave() {

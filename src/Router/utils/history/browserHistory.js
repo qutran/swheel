@@ -32,7 +32,6 @@ export function createBrowserHistory() {
     if (isBlocked()) return [back, []];
     isStateChangedFromUI = true;
     globalHistory.back();
-    setCurrentPath();
     currentState--;
   }
 
@@ -40,7 +39,6 @@ export function createBrowserHistory() {
     if (isBlocked()) return [forward, []];
     isStateChangedFromUI = true;
     globalHistory.forward();
-    setCurrentPath();
     currentState++;
   }
 
@@ -52,6 +50,7 @@ export function createBrowserHistory() {
 
   function onStateChange(e) {
     if (isStateChangedFromUI) {
+      setCurrentPath();
       isStateChangedFromUI = false;
       return;
     }
@@ -81,6 +80,13 @@ export function createBrowserHistory() {
     fn(...args);
   }
 
+  function onPageUnload(e) {
+    if (isBlocked()) {
+      e.returnValue = '';
+      return 'Are you sure?';
+    }
+  }
+
   function getCurrentPath() {
     return `${location.pathname}${location.search}${location.hash}`;
   }
@@ -92,10 +98,12 @@ export function createBrowserHistory() {
   const wrappedOnStateChange = wrapAfterAction(onStateChange);
 
   window.addEventListener('popstate', wrappedOnStateChange);
+  window.addEventListener('beforeunload', onPageUnload);
 
   onDestroy(() => {
     pendingAction = null;
     window.removeEventListener('popstate', wrappedOnStateChange);
+    window.removeEventListener('beforeunload', onPageUnload);
   });
 
   return {
