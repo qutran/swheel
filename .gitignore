@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+public/bundle.*
+public/main.*
+public/chunk*
+public/Page*
+dist
+package-lock.json

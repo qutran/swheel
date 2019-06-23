@@ -1,0 +1,46 @@
+{
+  "name": "swheel",
+  "version": "0.0.1",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.mjs",
+  "unpkg": "dist/es/index.mjs",
+  "license": "MIT",
+  "author": "Dmitry Kutran <kutran.dmitry@gmail.com> (https://github.com/qutran)",
+  "homepage": "https://github.com/qutran/swheel",
+  "repository": "github:qutran/swheel",
+  "bugs": "https://github.com/qutran/swheel/issues",
+  "description": "Ultimate svelte router",
+  "keywords": [
+    "svelte",
+    "router",
+    "swheel"
+  ],
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-extensions": "^0.1.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^4.0.4",
+    "sirv-cli": "^0.4.4",
+    "svelte": "^3.5.3"
+  },
+  "peerDependencies": {
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "path-to-regexp": "^3.0.0"
+  },
+  "scripts": {
+    "prepare": "npm run clean && npm run build",
+    "clean": "rimraf dist",
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "start": "run-p start:dev autobuild",
+    "start:dev": "sirv public --single --dev"
+  }
+}
