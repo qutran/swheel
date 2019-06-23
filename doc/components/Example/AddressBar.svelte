@@ -1,8 +1,8 @@
 <script>
-  import LazySvg from './LazySvg';
   import { derived } from 'svelte/store';
-  import { getHistory } from '../../src/Router';
-  import ArrowLeft from '../icons/arrowLeft.svg';
+  import { getHistory } from '../../../src/Router';
+  import LazySvg from '../LazySvg';
+  import ArrowLeft from '../../icons/arrowLeft.svg';
 
   const { stack, currentPath, back, forward, push } = getHistory();
   const hasPrev = derived(stack, $stack => $stack.hasPrev);
@@ -32,7 +32,7 @@
   }
 
   input {
-    flex: 1;
+    width: 100%;
     height: 100%;
     background: var(--primary-color);
     color: var(--text-color);
@@ -53,6 +53,8 @@
     opacity: 0.5;
     pointer-events: none;
     margin: 0 8px;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .navButton.active {
@@ -71,6 +73,7 @@
     border-radius: 50%;
     height: 36px;
     width: 36px;
+    min-width: 36px;
     margin: 0 8px;
     box-shadow: var(--depth1);
   }

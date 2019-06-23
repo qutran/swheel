@@ -42,7 +42,7 @@
     "build:doc": "NODE_ENV=doc npm run build",
     "autobuild": "rollup -c -w",
     "start": "run-p start:dev autobuild",
-    "start:dev": "sirv public --single --dev",
+    "start:dev": "sirv public --single --dev --host 0.0.0.0",
     "start:doc": "NODE_ENV=doc npm start"
   }
 }

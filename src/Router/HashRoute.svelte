@@ -17,7 +17,6 @@
   }
 
   const match = derived(currentPath, $currentPath => {
-    console.log({ $currentPath });
     return hash === `#${$currentPath.split('#')[1]}`;
   });
 </script>

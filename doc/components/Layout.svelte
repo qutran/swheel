@@ -12,41 +12,39 @@
     isFixedHeader = !!page.scrollTop;
   }
 
-  function scrollToTop() {
-    const scrollToView = tweened(page.scrollTop, { duration: 150 });
-
-    scrollToView.subscribe(top => {
-      page.scrollTo({ top });
-    });
-
-    scrollToView.set(0);
-  }
-
   function toggle() {
     isMenuOpen = !isMenuOpen;
   }
-
-  setContext('scrollToTop', scrollToTop);
-
-  onMount(() => {
-    onScroll();
-  });
 </script>
 
 <style>
+  .layout {
+    display: flex;
+    height: 100%;
+  }
+
   .page {
     overflow: auto;
-    background: #fff;
     height: 100%;
     box-shadow: var(--depth5);
     background: var(--secondary-color);
-    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-    transition: transform 200ms;
-    will-change: transform;
+    width: 100%;
+    transition: width 150ms;
+    will-change: width;
   }
 
-  .page.isMenuOpen {
-    transform: scale3d(0.8, 0.8, 0.8) translate3d(50%, 0, 0);
+  @media screen and (max-width: 768px) {
+    .page :global(.header) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      box-shadow: var(--depth1);
+    }
+
+    .page {
+      margin-top: calc(2 * var(--gap) + 40px);
+    }
   }
 
   .contentContainer {
@@ -54,11 +52,13 @@
   }
 </style>
 
-<Menu />
+<div class="layout" class:isMenuOpen>
+  <Menu />
 
-<div class="page" on:scroll={onScroll} class:isMenuOpen bind:this={page}>
-  <Header on:toggleMenu={toggle} isFixed={isFixedHeader} />
-  <div class="contentContainer">
-    <slot />
+  <div class="page" on:scroll={onScroll} bind:this={page}>
+    <Header on:toggleMenu={toggle} isFixed={isFixedHeader} />
+    <div class="contentContainer">
+      <slot />
+    </div>
   </div>
 </div>

@@ -9,7 +9,7 @@
   <a href="/">to home</a>
   <a href="/page1">to page 1</a>
   <a href="/page2">to page 2</a>
-  <a href="/page2/#hash">to page 2 with hash</a>
+  <a href="/page2#hash">to page 2 with hash</a>
 
   <Route path="/" exact>
     <Home />

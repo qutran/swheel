@@ -1,5 +1,5 @@
 <script>
-
+  import AddressBar from './AddressBar';
 </script>
 
 <style>
@@ -7,6 +7,12 @@
     font-size: 18px;
     display: flex;
     justify-content: center;
+  }
+
+  .exampleContainer {
+    box-shadow: var(--depth1);
+    margin: var(--gap);
+    padding: 8px 8px;
   }
 
   .navigation {
@@ -27,11 +33,14 @@
   }
 </style>
 
-<div class="example">
-  <div class="navigation">
-    <slot name="navigation" />
-  </div>
-  <div class="content">
-    <slot name="content" />
+<div class="exampleContainer">
+  <AddressBar />
+  <div class="example">
+    <div class="navigation">
+      <slot name="navigation" />
+    </div>
+    <div class="content">
+      <slot name="content" />
+    </div>
   </div>
 </div>
