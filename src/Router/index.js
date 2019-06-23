@@ -1,4 +1,5 @@
-export { default as Router } from './Router';
+export { default as Router } from './BrowserRouter';
+export { default as MemoryRouter } from './MemoryRouter';
 export { default as Route } from './Route';
 export { default as HashRoute } from './HashRoute';
 export { default as Redirect } from './Redirect';

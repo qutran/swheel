@@ -2,10 +2,11 @@
   import { links } from './links';
   import { createProtection } from './utils/protection';
   import { createRouter } from './utils/register';
-  import { createBrowserHistory } from './utils/history';
   import { fragment } from './utils/fragment';
+  import { createBrowserHistory } from './utils/history';
 
-  const history = createBrowserHistory();
+  export let history;
+
   createRouter();
   createProtection();
 </script>
