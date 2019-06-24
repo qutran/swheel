@@ -33,6 +33,11 @@
     will-change: width;
   }
 
+  .contentContainer {
+    overflow: auto;
+    height: 100%;
+  }
+
   @media screen and (max-width: 768px) {
     .page :global(.header) {
       position: fixed;
@@ -45,10 +50,10 @@
     .page {
       margin-top: calc(2 * var(--gap) + 40px);
     }
-  }
 
-  .contentContainer {
-    overflow: auto;
+    .contentContainer {
+      height: calc(100% - (2 * var(--gap) + 40px));
+    }
   }
 </style>
 
