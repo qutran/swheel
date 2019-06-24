@@ -34,7 +34,6 @@
   }
 
   .contentContainer {
-    overflow: auto;
     height: 100%;
   }
 
