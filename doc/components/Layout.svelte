@@ -5,7 +5,7 @@
   import { tweened } from 'svelte/motion';
 
   let page;
-  let isMenuOpen = false;
+  let isMenuOpen = true;
   let isFixedHeader = false;
 
   function onScroll() {
@@ -25,7 +25,6 @@
 
   .page {
     overflow: auto;
-    height: 100%;
     box-shadow: var(--depth5);
     background: var(--secondary-color);
     width: 100%;
@@ -54,13 +53,25 @@
       height: calc(100% - (2 * var(--gap) + 40px));
     }
   }
+
+  :global(button) {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: var(--link-color);
+    color: var(--primary-color);
+    outline: 0;
+    opacity: 1;
+    transition: opacity 100ms;
+    font-size: 16px;
+  }
 </style>
 
 <div class="layout" class:isMenuOpen>
   <Menu />
 
   <div class="page" on:scroll={onScroll} bind:this={page}>
-    <Header on:toggleMenu={toggle} isFixed={isFixedHeader} />
+    <Header on:toggleMenu={toggle} isFixed={isFixedHeader} {isMenuOpen} />
     <div class="contentContainer">
       <slot />
     </div>

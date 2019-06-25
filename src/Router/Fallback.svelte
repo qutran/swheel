@@ -5,6 +5,7 @@
   import { fragment } from './utils/fragment';
 
   export let lazy = null;
+  export let component = null;
   export let throttle = 0;
 
   const isFallback = createFallback();
@@ -20,6 +21,8 @@
         <slot name="catch" />
       </template>
     </Lazy>
+  {:else if !!component}
+    <svelte:component this={component} {...$match.params} />
   {:else}
     <slot />
   {/if}

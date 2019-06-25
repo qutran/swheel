@@ -7,6 +7,7 @@
 
   export let path;
   export let lazy = null;
+  export let component = null;
   export let throttle = 0;
   export let exact = false;
   export let when = true;
@@ -29,6 +30,8 @@
         <slot name="catch" />
       </template>
     </Lazy>
+  {:else if !!component}
+    <svelte:component this={component} {...$match.params} />
   {:else}
     <slot params={$match.params} />
   {/if}

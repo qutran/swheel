@@ -4,6 +4,7 @@
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
 
+  export let isMenuOpen;
   export let isFixed;
 
   let element;
@@ -56,7 +57,7 @@
 
 <div class="header" class:isFixed bind:this={element}>
   <div class="left">
-    <MenuButton on:click={() => dispatch('toggleMenu')} />
+    <MenuButton isOpen={isMenuOpen} on:click={() => dispatch('toggleMenu')} />
     <ThemeSwitcher />
   </div>
 </div>
