@@ -22,7 +22,7 @@
       </template>
     </Lazy>
   {:else if !!component}
-    <svelte:component this={component} {...$match.params} />
+    <svelte:component this={component} />
   {:else}
     <slot />
   {/if}
