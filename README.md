@@ -375,4 +375,4 @@ See [examples page](http://test.com/exampels 'examples page')
 
 1. SSR
 2. Layout API
-3. Assignment of **active** class for link element
+3. Assignment of **active** class to link element
