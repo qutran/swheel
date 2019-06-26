@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import extensions from 'rollup-plugin-extensions';
 import url from 'rollup-plugin-url';
+import md from 'rollup-plugin-md';
 
 const doc = process.env.NODE_ENV === 'doc';
 const production = !process.env.ROLLUP_WATCH;
@@ -52,7 +53,14 @@ if (doc) {
         }
       : config.output,
     inlineDynamicImports: true,
-    plugins: [...config.plugins, url()],
+    plugins: [
+      ...config.plugins,
+      url(),
+      md({
+        tables: true,
+        gfm: true,
+      }),
+    ],
   };
 } else if (production) {
   config = {

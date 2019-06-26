@@ -1,14 +1,14 @@
 # Swheel
 
-Declarative component-based svelte router.
+Declarative component-based **svelte v3** router.
 
 ## Install
 
 `npm i --save swheel`
 
-## Usage
+<!-- ## Usage
 
-See [examples page](http://test.com/exampels 'examples page')
+See [examples page](http://test.com/exampels 'examples page') -->
 
 ## API
 
@@ -81,7 +81,7 @@ See [examples page](http://test.com/exampels 'examples page')
     </tr>
     <tr>
       <td><code>stack</code><br />(<code>&lt;MemoryRouter&gt;</code> only)</td>
-      <td><code>{ stack, stack, hasNext, hasPrev }</code></td>
+      <td><code>{ stack, hasNext, hasPrev }</code></td>
       <td>Set of fields with memory histories' metadata</td>
     </tr>
   </tbody>
@@ -376,3 +376,4 @@ See [examples page](http://test.com/exampels 'examples page')
 1. SSR
 2. Layout API
 3. Assignment of **active** class to link element
+4. Examples
