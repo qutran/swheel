@@ -224,7 +224,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
       <td><code>hash</code></td>
       <td><code>String</code></td>
       <td>required</td>
-      <td>Should start from <code>#</code></td>
+      <td>Should start with <code>#</code></td>
     </tr>
     <tr>
       <td><code>let:removeHash</code></td>
