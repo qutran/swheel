@@ -28,8 +28,6 @@
     box-shadow: var(--depth5);
     background: var(--secondary-color);
     width: 100%;
-    transition: width 150ms;
-    will-change: width;
   }
 
   .contentContainer {

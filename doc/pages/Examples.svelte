@@ -10,10 +10,10 @@
 </script>
 
 <Basic />
+<HashRoute />
 <Fallback />
 <Redirect />
 <AdvancedRedirect />
-<HashRoute />
 <Protected />
 <BeforeLeave />
 <Lazy />

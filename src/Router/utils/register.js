@@ -3,15 +3,17 @@ import { get, derived, writable } from 'svelte/store';
 import { getProtected } from './protection';
 import { getHistory } from './history';
 import { matchPath } from './matchPath';
+import { createBasePath } from './basePath';
 
 const identity = _ => _;
 
 const CONTEXT_ROUTER_KEY = '__router';
 const CONTEXT_DEPTH_KEY = '__router_depth';
 
-export function createRouter() {
+export function createRouter(basePath = '/') {
   let routes = [];
 
+  createBasePath(basePath);
   setContext(CONTEXT_DEPTH_KEY, 0);
   setContext(CONTEXT_ROUTER_KEY, {
     getRoutes: () => routes,

@@ -16,6 +16,7 @@
     "swheel"
   ],
   "devDependencies": {
+    "marked": "^0.6.2",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.3",
     "rollup": "^1.10.1",

@@ -24,7 +24,7 @@
 
 {#if $match && when}
   {#if lazy}
-    <Lazy component={lazy} {throttle} data={$match.params}>
+    <Lazy component={lazy} {throttle} {removeHash} data={$match.params}>
       <template use:fragment slot="pending">
         <slot name="pending" />
       </template>
@@ -33,7 +33,7 @@
       </template>
     </Lazy>
   {:else if !!component}
-    <svelte:component this={component} {...$match.params} />
+    <svelte:component this={component} {removeHash} {...$match.params} />
   {:else}
     <slot {removeHash} />
   {/if}

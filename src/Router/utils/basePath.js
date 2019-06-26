@@ -7,5 +7,5 @@ export function createBasePath(basePath) {
 }
 
 export function getBasePath() {
-  return getContext(CONTEXT_KEY) || '';
+  return (getContext(CONTEXT_KEY) || '').replace(/\/$/, '');
 }

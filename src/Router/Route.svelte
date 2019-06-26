@@ -13,7 +13,7 @@
   export let when = true;
 
   const depth = getDepth();
-  const routePath = getBasePath().replace(/\/$/, '') + path;
+  const routePath = getBasePath() + path;
 
   createBasePath(routePath);
 

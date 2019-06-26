@@ -11,6 +11,6 @@
   createProtection();
 </script>
 
-<div use:links={{ history }}>
+<object aria-label="links" use:links={{ history }}>
   <slot />
-</div>
+</object>
