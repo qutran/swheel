@@ -1,6 +1,6 @@
 # Swheel
 
-Declarative component-based **svelte v3** router.
+Declarative component-based [**svelte 3**](https://github.com/sveltejs/svelte) router.
 
 ## Install
 
