@@ -13,9 +13,12 @@ export function links(node, { history }) {
         current.getAttribute('target'),
       )
     ) {
-      e.preventDefault();
       const action = current.getAttribute('replace') ? 'replace' : 'push';
-      history[action](current.getAttribute('href'));
+      const href = current.getAttribute('href');
+      if (!['//', 'http'].find(rule => href.startsWith(rule))) {
+        e.preventDefault();
+        history[action]();
+      }
     }
   }
 
