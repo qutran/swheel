@@ -17,7 +17,7 @@ export function links(node, { history }) {
       const href = current.getAttribute('href');
       if (!['//', 'http'].find(rule => href.startsWith(rule))) {
         e.preventDefault();
-        history[action]();
+        history[action](href);
       }
     }
   }
