@@ -4,7 +4,7 @@ const patternCache = {};
 const cacheLimit = 10000;
 let cacheCount = 0;
 
-const compilePath = (pattern, options) => {
+function compilePath(pattern, options) {
   const cacheKey = `${options.end}${options.strict}${options.sensitive}`;
   const cache = patternCache[cacheKey] || (patternCache[cacheKey] = {});
 
@@ -22,9 +22,9 @@ const compilePath = (pattern, options) => {
   }
 
   return compiledPattern;
-};
+}
 
-const matchPath = (pathname, options = {}) => {
+export function matchPath(pathname, options = {}) {
   if (typeof options === 'string') {
     options = { path: options };
   }
@@ -64,6 +64,4 @@ const matchPath = (pathname, options = {}) => {
       return memo;
     }, {}),
   };
-};
-
-export { matchPath };
+}

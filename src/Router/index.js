@@ -7,3 +7,4 @@ export { default as BeforeLeave } from './BeforeLeave';
 export { default as Protected } from './Protected';
 export { default as Fallback } from './Fallback';
 export { getHistory } from './utils/history';
+export { navLink } from './navLink';
