@@ -14,7 +14,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
 
 ### &lt;Router&gt;
 
-<p>Should be placed on the top of your application. Applies special listener for every <code>&lt;a&gt;</code> tag and initializes routing state for application's tree.</p>
+<p>Should be placed on the top of your application. Applies special listener for every <code>&lt;a&gt;</code> element and initializes routing state for application's tree.</p>
 <p>Uses browser history API.</p>
 
 ### &lt;MemoryRouter&gt;
@@ -28,6 +28,43 @@ See [examples page](http://test.com/exampels 'examples page') -->
 </p>
 
 <p>This function should be called in the component's initialization step bacause <code>Router</code> and <code>MemoryRouter</code> uses svelte's context API as a core approach</p>
+
+### navLink: <code>Function</code>
+
+<p>
+  Svelte action. Allows to control <code>active</code> class (show/hide it) in case of matching <code>hred</code> attribute with current path of history. Active class name should be defined explicitly to be compiled with svelte.
+</p>
+
+<p>
+  Ex. <code>&lt;a use:navLink={{ exact: true, activeClass: 'active' }} class="active" href="/path" /&gt;</code>
+</p>
+
+#### Parameters:
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default / required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>exact</td>
+      <td><code>Boolean</code></td>
+      <td><code>false</code></td>
+      <td>If pathes should have exactly matches</td>
+    </td>
+    <tr>
+      <td>activeClass</td>
+      <td><code>String</code></td>
+      <td><code>'active'</code></td>
+      <td>Class name that will be assigned in case of pathes matches</td>
+    </td>
+  </tbody>
+</table>
 
 #### Methods:
 
@@ -136,7 +173,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
       <td align="center"><code>Boolean</code></td>
       <td align="center"><code>false</code></td>
       <td>
-        <p>Detects if path should have exactly matched</p>
+        <p>Detects if path should have exactly matches</p>
       </td>
     </tr>
     <tr>
@@ -288,7 +325,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
       <td><code>Boolean</code></td>
       <td><code>false</code></td>
       <td>
-        Detects if path of <code>from</code> property should have exactly matched
+        Detects if path of <code>from</code> property should have exactly matches
       </td>
     </tr>
   </tbody>
@@ -375,5 +412,4 @@ See [examples page](http://test.com/exampels 'examples page') -->
 
 1. SSR
 2. Layout API
-3. Assignment of **active** class to link element
-4. Examples
+3. Examples
