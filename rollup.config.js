@@ -9,7 +9,6 @@ import md from 'rollup-plugin-md';
 
 const doc = process.env.NODE_ENV === 'doc';
 const production = !process.env.ROLLUP_WATCH;
-console.log(process.env.NODE_ENV);
 
 let config = {
   input: 'src/examples/main.js',
