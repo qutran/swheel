@@ -29,43 +29,6 @@ See [examples page](http://test.com/exampels 'examples page') -->
 
 <p>This function should be called in the component's initialization step bacause <code>Router</code> and <code>MemoryRouter</code> uses svelte's context API as a core approach</p>
 
-### navLink: <code>Function</code>
-
-<p>
-  Svelte action. Allows to control <code>active</code> class (show/hide it) in case of matching <code>hred</code> attribute with current path of history. Active class name should be defined explicitly to be compiled with svelte.
-</p>
-
-<p>
-  Ex. <code>&lt;a use:navLink={{ exact: true, activeClass: 'active' }} class="active" href="/path" /&gt;</code>
-</p>
-
-#### Parameters:
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default / required</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>exact</td>
-      <td><code>Boolean</code></td>
-      <td><code>false</code></td>
-      <td>If pathes should have exactly matches</td>
-    </td>
-    <tr>
-      <td>activeClass</td>
-      <td><code>String</code></td>
-      <td><code>'active'</code></td>
-      <td>Class name that will be assigned in case of pathes matches</td>
-    </td>
-  </tbody>
-</table>
-
 #### Methods:
 
 <table>
@@ -121,6 +84,43 @@ See [examples page](http://test.com/exampels 'examples page') -->
       <td><code>{ stack, hasNext, hasPrev }</code></td>
       <td>Set of fields with memory histories' metadata</td>
     </tr>
+  </tbody>
+</table>
+
+### navLink: <code>Function</code>
+
+<p>
+  Svelte action. Allows to control <code>active</code> class (show/hide it) in case of matching <code>hred</code> attribute with current path of history. Active class name should be defined explicitly to be compiled with svelte.
+</p>
+
+<p>
+  Ex. <code>&lt;a use:navLink={{ exact: true, activeClass: 'active' }} class="active" href="/path" /&gt;</code>
+</p>
+
+#### Parameters:
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default / required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>exact</td>
+      <td><code>Boolean</code></td>
+      <td><code>false</code></td>
+      <td>If pathes should have exactly matches</td>
+    </td>
+    <tr>
+      <td>activeClass</td>
+      <td><code>String</code></td>
+      <td><code>'active'</code></td>
+      <td>Class name that will be assigned in case of pathes matches</td>
+    </td>
   </tbody>
 </table>
 
