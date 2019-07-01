@@ -14,7 +14,7 @@
 </script>
 
 <MemoryRouter>
-  <Example>
+  <Example title="Lazy">
     <div slot="navigation">
       <a href="/">to home</a>
       <a href="/page1">to page 1 (without throttling)</a>
