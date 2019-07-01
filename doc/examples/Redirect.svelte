@@ -8,7 +8,7 @@
 </script>
 
 <MemoryRouter>
-  <Example>
+  <Example title="Redirect">
     <div slot="navigation">
       <a href="/">to home</a>
       <a href="/page1">to page 1</a>

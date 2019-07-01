@@ -1,5 +1,6 @@
 <script>
   import AddressBar from './AddressBar';
+  export let title;
 </script>
 
 <style>
@@ -36,6 +37,8 @@
     padding: 8px;
   }
 </style>
+
+<div>{title}</div>
 
 <div class="exampleContainer">
   <AddressBar />

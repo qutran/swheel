@@ -8,7 +8,7 @@
   let value = '';
 </script>
 
-<MemoryRouter>
+<MemoryRouter title="BeforeLeave">
   <Example>
     <div slot="navigation">
       <a href="/">to home</a>
