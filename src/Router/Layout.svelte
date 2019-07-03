@@ -1,5 +1,7 @@
 <script>
-  $$props.$$slots.default = $$props.$$slots.pending;
+  export let component;
 </script>
 
-<slot />
+<svelte:component this={component}>
+  <slot />
+</svelte:component>

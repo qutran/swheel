@@ -65,6 +65,7 @@ if (doc) {
   config = {
     ...config,
     input: 'src/Router/index.js',
+    external: ['svelte'],
     output: [
       {
         file: 'dist/es/index.mjs',

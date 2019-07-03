@@ -1,5 +1,5 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
+  import { onDestroy } from 'svelte';
   import { getHistory } from './utils/history';
 
   export let shouldDetectLeave = true;

@@ -1,7 +1,6 @@
 <script>
   import Menu from './Menu';
   import Header from './Header';
-  import { onMount, setContext } from 'svelte';
   import { tweened } from 'svelte/motion';
 
   let page;

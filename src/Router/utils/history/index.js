@@ -5,7 +5,9 @@ import { createBrowserHistory as createBaseBrowserHistory } from './browserHisto
 export const HISTORY_KEY = '__history';
 
 function createHistory(baseHistory) {
+  console.log('createHistory1');
   setContext(HISTORY_KEY, baseHistory);
+  console.log('createHistory2');
   return baseHistory;
 }
 
@@ -14,6 +16,7 @@ export function getHistory() {
 }
 
 export function createBrowserHistory() {
+  console.log('createBrowserHistory1');
   return createHistory(createBaseBrowserHistory());
 }
 
