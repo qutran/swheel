@@ -447,5 +447,4 @@ See [examples page](http://test.com/exampels 'examples page') -->
 # TODO
 
 1. SSR
-2. Layout API
-3. Examples
+2. Examples
