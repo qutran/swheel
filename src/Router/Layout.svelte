@@ -1,8 +1,7 @@
 <script>
   import { onMount, tick } from 'svelte';
-  import { createLayout } from '../utils/register';
-  import { fragment } from '../utils/fragment';
-  import Placeholder from './Placeholder';
+  import { createLayout } from './utils/register';
+  import { fragment } from './utils/fragment';
 
   export let component;
 
