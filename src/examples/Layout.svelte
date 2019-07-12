@@ -1,14 +1,9 @@
 <script>
-  import { Router, Route, Layout } from '../Router';
+  import { Router, Route, Layout, Protected, Fallback } from '../Router';
   import Home from './components/Home';
   import Page1 from './components/Page1';
   import Page2 from './components/Page2';
   import MainLayout from './components/MainLayout';
-
-  let c = 0;
-  setInterval(() => {
-    c++;
-  }, 1000);
 </script>
 
 <Router>
