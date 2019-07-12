@@ -238,6 +238,42 @@ See [examples page](http://test.com/exampels 'examples page') -->
   </tbody>
 </table>
 
+### &lt;Layout&gt;
+
+<p>
+  Provides the possibility to declaratively define layouts around the group of routes and will be rendered only in the case if any path of these routes matches.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default / required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><code>component</code></td>
+      <td align="center"><code>SvelteComponent</code></td>
+      <td align="center">required</td>
+      <td>
+        Layout component that wraps the group of routes. <code>&lt;slot/&gt;</code> content of <code>lt;Layout&gt;</code> will be passed to it.
+        Renders only in case if any path of inner routes matches.
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><code>&lt;slot /&gt;</code></td>
+      <td align="center"><code>SvelteSlot</code></td>
+      <td align="center"><code>-</code></td>
+      <td>
+        <p>Will be passed to the <code>component</code>.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### &lt;HashRoute&gt;
 
 <p>

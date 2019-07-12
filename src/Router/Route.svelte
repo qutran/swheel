@@ -17,10 +17,14 @@
 
   createBasePath(routePath);
 
-  const match = createRoute({ path: routePath, exact, depth });
+  const [match, isRenderUnlocked] = createRoute({
+    path: routePath,
+    exact,
+    depth,
+  });
 </script>
 
-{#if $match && when}
+{#if $match && when && $isRenderUnlocked}
   {#if typeof lazy === 'function'}
     <Lazy component={lazy} {throttle} data={$match.params}>
       <template use:fragment slot="pending">

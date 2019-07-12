@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
   import { getPromiseFromCache } from './utils/lazyCache';
 
   export let component;
