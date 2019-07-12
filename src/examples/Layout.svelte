@@ -1,5 +1,5 @@
 <script>
-  import { Router, Route, Layout, Protected, Fallback } from '../Router';
+  import { Router, Route, Layout } from '../Router';
   import Home from './components/Home';
   import Page1 from './components/Page1';
   import Page2 from './components/Page2';
@@ -16,10 +16,6 @@
   </Route>
 
   <Layout component={MainLayout}>
-    <div slot="pending">
-      <div>loading...</div>
-    </div>
-
     <Route path="/page1">
       <Page1 />
     </Route>
