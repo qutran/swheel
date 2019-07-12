@@ -90,7 +90,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
 ### navLink: <code>Function</code>
 
 <p>
-  Svelte action. Allows to control <code>active</code> class (show/hide it) in case of matching <code>hred</code> attribute with current path of history. Active class name should be defined explicitly to be compiled with svelte.
+  Svelte action. Allows to control <code>active</code> class (show/hide it) in case of matching <code>href</code> attribute with current path of history. Active class name should be defined explicitly to be compiled with svelte.
 </p>
 
 <p>
