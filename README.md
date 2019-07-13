@@ -1,5 +1,9 @@
 # Swheel
 
+<p align="center">
+  <img width="256" height="256" src="logo.svg">
+</p>
+
 Declarative component-based [**svelte 3**](https://github.com/sveltejs/svelte) router.
 
 ## Install
