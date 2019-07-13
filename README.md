@@ -259,7 +259,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
       <td align="center"><code>SvelteComponent</code></td>
       <td align="center">required</td>
       <td>
-        Layout component that wraps the group of routes. <code>&lt;slot/&gt;</code> content of <code>lt;Layout&gt;</code> will be passed to it.
+        Layout component that wraps the group of routes. <code>&lt;slot/&gt;</code> content of <code>&lt;Layout&gt;</code> will be passed to it.
         Renders only in case if any path of inner routes matches.
       </td>
     </tr>
