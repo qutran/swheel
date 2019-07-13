@@ -264,6 +264,14 @@ See [examples page](http://test.com/exampels 'examples page') -->
       </td>
     </tr>
     <tr>
+      <td align="center"><code>when</code></td>
+      <td align="center"><code>Boolean</code></td>
+      <td align="center"><code>true</code></td>
+      <td>
+        <p>Detects if layout and it routes' group is using in current flow</p>
+      </td>
+    </tr>
+    <tr>
       <td align="center"><code>&lt;slot /&gt;</code></td>
       <td align="center"><code>SvelteSlot</code></td>
       <td align="center"><code>-</code></td>
