@@ -2,7 +2,7 @@
   import { MemoryRouter, Route } from '../../src/Router';
   import Example from '../components/Example';
   import Home from './mock/Home';
-  import Dynamic from './mock/DynamicPage';
+  import DynamicPage from './mock/DynamicPage';
 </script>
 
 <MemoryRouter>
@@ -18,7 +18,7 @@
       </Route>
 
       <Route path="/page/:id" let:params={params}>
-        <Dynamic {params} />
+        <DynamicPage {params} />
       </Route>
 
     </div>
