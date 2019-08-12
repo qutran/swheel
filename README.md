@@ -16,19 +16,19 @@ See [examples page](http://test.com/exampels 'examples page') -->
 
 ## API
 
-- [&lt;Router /&gt;](#router)
-- [&lt;MemoryRouter /&gt;](#memoryrouter)
+- [&lt;Router /&gt;](#router-)
+- [&lt;MemoryRouter /&gt;](#memoryrouter-)
 - [getHistory()](#gethistory-function)
   - [history methods](#methods)
   - [history stores](#stores)
 - [navLink](#navlink-function)
-- [&lt;Route /&gt;](#route)
-- [&lt;Layout /&gt;](#layout)
-- [&lt;HashRoute /&gt;](#hashroute)
-- [&lt;Fallback /&gt;](#fallback)
-- [&lt;Redirect /&gt;](#redirect)
-- [&lt;BeforeLeave /&gt;](#beforeleave)
-- [&lt;Protected /&gt;](#protected)
+- [&lt;Route /&gt;](#route-)
+- [&lt;Layout /&gt;](#layout-)
+- [&lt;HashRoute /&gt;](#hashroute-)
+- [&lt;Fallback /&gt;](#fallback-)
+- [&lt;Redirect /&gt;](#redirect-)
+- [&lt;BeforeLeave /&gt;](#beforeleave-)
+- [&lt;Protected /&gt;](#protected-)
 
 ### &lt;Router /&gt;
 
