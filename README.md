@@ -16,12 +16,26 @@ See [examples page](http://test.com/exampels 'examples page') -->
 
 ## API
 
-### &lt;Router&gt;
+- [&lt;Router /&gt;](#router)
+- [&lt;MemoryRouter /&gt;](#memoryrouter)
+- [getHistory()](#gethistory-function)
+  - [history methods](#methods)
+  - [history stores](#stores)
+- [navLink](#navlink-function)
+- [&lt;Route /&gt;](#route)
+- [&lt;Layout /&gt;](#layout)
+- [&lt;HashRoute /&gt;](#hashroute)
+- [&lt;Fallback /&gt;](#fallback)
+- [&lt;Redirect /&gt;](#redirect)
+- [&lt;BeforeLeave /&gt;](#beforeleave)
+- [&lt;Protected /&gt;](#protected)
+
+### &lt;Router /&gt;
 
 <p>Should be placed on the top of your application. Applies special listener for every <code>&lt;a&gt;</code> element and initializes routing state for application's tree.</p>
 <p>Uses browser history API.</p>
 
-### &lt;MemoryRouter&gt;
+### &lt;MemoryRouter /&gt;
 
 <p>The same as <code>&lt;Router&gt;</code> but uses in-memory history API.</p>
 
@@ -128,7 +142,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
   </tbody>
 </table>
 
-### &lt;Route&gt;
+### &lt;Route /&gt;
 
 <p>
   Specifies your route configuration.
@@ -242,7 +256,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
   </tbody>
 </table>
 
-### &lt;Layout&gt;
+### &lt;Layout /&gt;
 
 <p>
   Provides the possibility to declaratively define layouts around the group of routes and will be rendered only in the case if any path of these routes matches.
@@ -286,7 +300,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
   </tbody>
 </table>
 
-### &lt;HashRoute&gt;
+### &lt;HashRoute /&gt;
 
 <p>
   Extends <code>&lt;Route&gt;</code> without <code>path</code> property and expands with own ones.
@@ -324,7 +338,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
   </tbody>
 </table>
 
-### &lt;Fallback&gt;
+### &lt;Fallback /&gt;
 
 <p>
   Extends <code>&lt;Route&gt;</code> without <code>path</code> property.
@@ -334,7 +348,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
   Usefull for <code>404 (NotFound)</code> pages.
 </p>
 
-### &lt;Redirect&gt;
+### &lt;Redirect /&gt;
 
 <p>
   Determines overriding of current location. <br />
@@ -379,7 +393,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
   </tbody>
 </table>
 
-### &lt;BeforeLeave&gt;
+### &lt;BeforeLeave /&gt;
 
 <p>
   Provides possibility to prevent leaving from the page.
@@ -431,10 +445,10 @@ See [examples page](http://test.com/exampels 'examples page') -->
   </tbody>
 </table>
 
-### &lt;Protected&gt;
+### &lt;Protected /&gt;
 
 <p>
-  Protects displaying of nested routes. If routes was wrapped with some content before - it (content) will be displayed in any case. 
+  Protects displaying of nested routes. If routes was wrapped with some content before - it (content) will be displayed in any case. Uses as an abstraction for <code><a href="#layout">&lt;Layout /&gt;</a></code> but could be usefull in some special cases.
 </p>
 
 <table>
