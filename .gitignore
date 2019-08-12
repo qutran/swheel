@@ -2,8 +2,10 @@
 node_modules
 public/bundle.*
 public/main.*
+public/ssr.*
 public/chunk*
 public/Page*
 dist
 dist_doc
 package-lock.json
+stats.html
