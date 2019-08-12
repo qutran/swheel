@@ -448,7 +448,7 @@ See [examples page](http://test.com/exampels 'examples page') -->
 ### &lt;Protected /&gt;
 
 <p>
-  Protects displaying of nested routes. If routes was wrapped with some content before - it (content) will be displayed in any case. Uses as an abstraction for <code><a href="#layout">&lt;Layout /&gt;</a></code> but could be usefull in some special cases.
+  Protects displaying of nested routes. If routes was wrapped with some content before - it (content) will be displayed in any case. Uses as an abstraction for <code><a href="#layout-">&lt;Layout /&gt;</a></code> but could be usefull in some special cases.
 </p>
 
 <table>
