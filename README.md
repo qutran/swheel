@@ -6,6 +6,9 @@
 
 Declarative component-based [**svelte 3**](https://github.com/sveltejs/svelte) router.
 
+[Examples](https://github.com/qutran/swheel/tree/master/src/examples)
+
+
 ## Install
 
 `npm i --save swheel`
