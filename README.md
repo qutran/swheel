@@ -475,7 +475,6 @@ See [examples page](http://test.com/exampels 'examples page') -->
 
 # TODO
 
-1. SSR
-2. Examples
-3. Unit tests
-4. Typings
+1. Recipe for SSR
+2. Unit tests
+3. Typings
