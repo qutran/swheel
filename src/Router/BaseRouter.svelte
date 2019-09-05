@@ -9,10 +9,10 @@
 
 <script>
   import { onDestroy } from 'svelte';
-  import { links } from './links';
-  import { createProtection } from './utils/protection';
-  import { createRouter } from './utils/register';
-  import { fragment } from './utils/fragment';
+  import { links } from './links.js';
+  import { createProtection } from './utils/protection.js';
+  import { createRouter } from './utils/register.js';
+  import { fragment } from './utils/fragment.js';
 
   export let history;
 

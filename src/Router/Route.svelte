@@ -1,9 +1,9 @@
 <script>
-  import { getProtected } from './utils/protection';
-  import { createRoute, getDepth } from './utils/register';
-  import { createBasePath, getBasePath } from './utils/basePath';
-  import { fragment } from './utils/fragment';
-  import Lazy from './Lazy';
+  import { getProtected } from './utils/protection.js';
+  import { createRoute, getDepth } from './utils/register.js';
+  import { createBasePath, getBasePath } from './utils/basePath.js';
+  import { fragment } from './utils/fragment.js';
+  import Lazy from './Lazy.svelte';
 
   export let path;
   export let lazy = null;

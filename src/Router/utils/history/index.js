@@ -1,6 +1,6 @@
 import { setContext, getContext } from 'svelte';
-import { createMemoryHistory as createBaseMemoryHistory } from './memoryHistory';
-import { createBrowserHistory as createBaseBrowserHistory } from './browserHistory';
+import { createMemoryHistory as createBaseMemoryHistory } from './memoryHistory.js';
+import { createBrowserHistory as createBaseBrowserHistory } from './browserHistory.js';
 
 export const HISTORY_KEY = '__history';
 

@@ -1,5 +1,5 @@
 <script>
-  import { getPromiseFromCache } from './utils/lazyCache';
+  import { getPromiseFromCache } from './utils/lazyCache.js';
 
   export let component;
   export let throttle;

@@ -1,10 +1,10 @@
 import { tick, setContext, getContext, onDestroy } from 'svelte';
 import { get, derived, writable, readable } from 'svelte/store';
-import { getProtected } from './protection';
-import { getHistory } from './history';
-import { matchPath } from './matchPath';
-import { createBasePath } from './basePath';
-import { dynamicDerived } from './dynamicDerived';
+import { getProtected } from './protection.js';
+import { getHistory } from './history/index.js';
+import { matchPath } from './matchPath.js';
+import { createBasePath } from './basePath.js';
+import { dynamicDerived } from './dynamicDerived.js';
 
 const identity = _ => _;
 
