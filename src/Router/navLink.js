@@ -1,5 +1,5 @@
-import { matchPath } from './utils/matchPath';
-import { getHistoryById } from './BaseRouter';
+import { matchPath } from './utils/matchPath.js';
+import { getHistoryById } from './BaseRouter.svelte';
 
 export function navLink(node, { activeClass = 'active', exact = false } = {}) {
   function getLinksView() {

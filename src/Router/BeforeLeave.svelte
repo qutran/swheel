@@ -1,6 +1,6 @@
 <script>
   import { onDestroy } from 'svelte';
-  import { getHistory } from './utils/history';
+  import { getHistory } from './utils/history/index.js';
 
   export let shouldDetectLeave = true;
 

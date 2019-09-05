@@ -1,6 +1,6 @@
 <script>
-  import { createRedirect, getDepth } from './utils/register';
-  import { getBasePath } from './utils/basePath';
+  import { createRedirect, getDepth } from './utils/register.js';
+  import { getBasePath } from './utils/basePath.js';
 
   export let exact = false;
   export let from = '*';

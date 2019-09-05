@@ -4,7 +4,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.mjs",
   "unpkg": "dist/es/index.mjs",
-  "svelte": "dist/es/index.mjs",
+  "svelte": "src/Router/index.js",
   "license": "MIT",
   "author": "Dmitry Kutran <kutran.dmitry@gmail.com> (https://github.com/qutran)",
   "homepage": "https://github.com/qutran/swheel",

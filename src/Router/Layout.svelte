@@ -1,8 +1,8 @@
 <script>
   import { onMount, tick } from 'svelte';
-  import { createLayout } from './utils/register';
-  import { fragment } from './utils/fragment';
-  import Protected from './Protected';
+  import { createLayout } from './utils/register.js';
+  import { fragment } from './utils/fragment.js';
+  import Protected from './Protected.svelte';
 
   export let component;
   export let when = true;

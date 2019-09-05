@@ -1,6 +1,6 @@
 <script>
-  import BaseRouter from './BaseRouter';
-  import { createMemoryHistory } from './utils/history';
+  import BaseRouter from './BaseRouter.svelte';
+  import { createMemoryHistory } from './utils/history/index.js';
   const history = createMemoryHistory();
 </script>
 

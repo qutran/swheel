@@ -1,6 +1,6 @@
 <script>
   import { afterUpdate } from 'svelte';
-  import { createLocalProtection } from './utils/protection';
+  import { createLocalProtection } from './utils/protection.js';
   export let when;
 
   const isProtected = createLocalProtection(when);

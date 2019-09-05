@@ -1,8 +1,8 @@
 <script>
-  import { getHistory } from './utils/history';
   import { get, derived } from 'svelte/store';
-  import { fragment } from './utils/fragment';
-  import Lazy from './Lazy';
+  import { getHistory } from './utils/history/index.js';
+  import { fragment } from './utils/fragment.js';
+  import Lazy from './Lazy.svelte';
 
   export let lazy = null;
   export let component = null;

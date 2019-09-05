@@ -1,8 +1,8 @@
 <script>
-  import Route from './Route';
-  import Lazy from './Lazy';
-  import { createFallback } from './utils/register';
-  import { fragment } from './utils/fragment';
+  import Route from './Route.svelte';
+  import Lazy from './Lazy.svelte';
+  import { createFallback } from './utils/register.js';
+  import { fragment } from './utils/fragment.js';
 
   export let lazy = null;
   export let component = null;

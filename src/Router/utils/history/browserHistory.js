@@ -1,5 +1,5 @@
 import { onDestroy } from 'svelte';
-import { createBaseHistory } from './baseHistory';
+import { createBaseHistory } from './baseHistory.js';
 const globalHistory = window.history;
 
 export function createBrowserHistory() {
